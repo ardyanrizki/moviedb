@@ -44,6 +44,5 @@ protocol InteractorToPresenterGenreProtocol {
 // MARK: Router Input (Presenter -> Router)
 protocol PresenterToRouterGenreProtocol {
     func pushDiscoverMovies(on view: PresenterToViewGenreProtocol?, by genreId: GenreModel)
-    func popController(from view: PresenterToViewGenreProtocol?)
     func presentAlert(title: String, message: String, from view: PresenterToViewGenreProtocol?)
 }

@@ -27,13 +27,6 @@ class ReviewRouter: PresenterToRouterReviewProtocol {
         return viewController
     }
     
-    func popController(from view: PresenterToViewReviewProtocol?) {
-        guard let view = view as? ReviewViewController else {
-            return
-        }
-        view.navigationController?.popViewController(animated: true)
-    }
-    
     func presentAlert(title: String, message: String, from view: PresenterToViewReviewProtocol?) {
         guard let view = view as? ReviewViewController else {
             return

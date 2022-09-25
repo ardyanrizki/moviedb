@@ -35,13 +35,6 @@ class MovieRouter: PresenterToRouterMovieProtocol {
         viewController.navigationController?.pushViewController(detailViewController, animated: true)
     }
     
-    func popController(from view: PresenterToViewMovieProtocol?) {
-        guard let view = view as? MovieViewController else {
-            return
-        }
-        view.navigationController?.popViewController(animated: true)
-    }
-    
     func presentAlert(title: String, message: String, from view: PresenterToViewMovieProtocol?) {
         guard let view = view as? MovieViewController else {
             return

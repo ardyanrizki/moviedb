@@ -36,13 +36,6 @@ class GenreRouter: PresenterToRouterGenreProtocol {
         viewController.navigationController?.pushViewController(movieViewController, animated: true)
     }
     
-    func popController(from view: PresenterToViewGenreProtocol?) {
-        guard let view = view as? GenreViewController else {
-            return
-        }
-        view.navigationController?.popViewController(animated: true)
-    }
-    
     func presentAlert(title: String, message: String, from view: PresenterToViewGenreProtocol?) {
         guard let view = view as? GenreViewController else {
             return

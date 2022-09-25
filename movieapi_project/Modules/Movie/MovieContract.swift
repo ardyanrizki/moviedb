@@ -46,6 +46,5 @@ protocol InteractorToPresenterMovieProtocol {
 // MARK: Router Input (Presenter -> Router)
 protocol PresenterToRouterMovieProtocol {
     func pushMovieDetail(on view: PresenterToViewMovieProtocol?, by movieId: Int)
-    func popController(from view: PresenterToViewMovieProtocol?)
     func presentAlert(title: String, message: String, from view: PresenterToViewMovieProtocol?)
 }

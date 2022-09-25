@@ -27,13 +27,6 @@ class VideoRouter: PresenterToRouterVideoProtocol {
         return viewController
     }
     
-    func popController(from view: PresenterToViewVideoProtocol?) {
-        guard let view = view as? VideoViewController else {
-            return
-        }
-        view.navigationController?.popViewController(animated: true)
-    }
-    
     func presentAlert(title: String, message: String, from view: PresenterToViewVideoProtocol?) {
             guard let view = view as? VideoViewController else {
                 return

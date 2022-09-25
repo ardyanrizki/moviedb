@@ -43,6 +43,5 @@ protocol InteractorToPresenterReviewProtocol {
 
 // MARK: Router Input (Presenter -> Router)
 protocol PresenterToRouterReviewProtocol {
-    func popController(from view: PresenterToViewReviewProtocol?)
     func presentAlert(title: String, message: String, from view: PresenterToViewReviewProtocol?)
 }

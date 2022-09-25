@@ -46,6 +46,5 @@ protocol InteractorToPresenterDetailProtocol {
 protocol PresenterToRouterDetailProtocol {
     func pushReview(on view: PresenterToViewDetailProtocol?, by movieId: Int)
     func pushVideo(on view: PresenterToViewDetailProtocol?, by movie: MovieDetailModel)
-    func popController(from view: PresenterToViewDetailProtocol?)
     func presentAlert(title: String, message: String, from view: PresenterToViewDetailProtocol?)
 }

@@ -46,6 +46,5 @@ protocol InteractorToPresenterVideoProtocol {
 
 // MARK: Router Input (Presenter -> Router)
 protocol PresenterToRouterVideoProtocol {
-    func popController(from view: PresenterToViewVideoProtocol?)
     func presentAlert(title: String, message: String, from view: PresenterToViewVideoProtocol?)
 }
