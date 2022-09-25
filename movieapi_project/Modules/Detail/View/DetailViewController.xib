@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailViewController" customModule="movieapi_project" customModuleProvider="target">
+            <connections>
+                <outlet property="activityIndicator" destination="8XB-h4-rrG" id="Qbc-sy-xdJ"/>
+                <outlet property="descLabel" destination="A5f-kv-xPE" id="tDp-1g-SDi"/>
+                <outlet property="posterImage" destination="1G9-Iu-qy4" id="k3Z-fD-cUR"/>
+                <outlet property="reviewButton" destination="GwW-is-jvR" id="ag6-dQ-af7"/>
+                <outlet property="titleLabel" destination="RZC-PQ-30x" id="NBo-Qb-ZjC"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="watchButton" destination="xzU-3H-LH5" id="Q8G-iC-DA8"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fallback" translatesAutoresizingMaskIntoConstraints="NO" id="1G9-Iu-qy4">
+                    <rect key="frame" x="0.0" y="47" width="390" height="379.66666666666669"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RZC-PQ-30x" userLabel="Title Label">
+                    <rect key="frame" x="16" y="450.66666666666669" width="358" height="26.333333333333314"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5f-kv-xPE" userLabel="Desc Label">
+                    <rect key="frame" x="16" y="493" width="358" height="20.333333333333371"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GwW-is-jvR">
+                    <rect key="frame" x="16" y="758" width="358" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="huu-to-TPl"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="gray" title="See Review"/>
+                    <connections>
+                        <action selector="reviewButtonDidPressed:" destination="-1" eventType="touchUpInside" id="jRH-bJ-ZUP"/>
+                    </connections>
+                </button>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="8XB-h4-rrG">
+                    <rect key="frame" x="185" y="412" width="20" height="20"/>
+                </activityIndicatorView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xzU-3H-LH5">
+                    <rect key="frame" x="16" y="706" width="358" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="BJH-3T-NxJ"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="Watch"/>
+                    <connections>
+                        <action selector="watchButtonDidPressed:" destination="-1" eventType="touchUpInside" id="jo8-oG-lXT"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="1G9-Iu-qy4" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Fvb-jJ-Iku"/>
+                <constraint firstItem="xzU-3H-LH5" firstAttribute="top" relation="greaterThanOrEqual" secondItem="A5f-kv-xPE" secondAttribute="bottom" constant="16" id="J7s-bP-gMH"/>
+                <constraint firstItem="RZC-PQ-30x" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="K3E-8K-mpb"/>
+                <constraint firstItem="1G9-Iu-qy4" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="L73-5A-8hR"/>
+                <constraint firstItem="8XB-h4-rrG" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="SRV-hb-ab4"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="GwW-is-jvR" secondAttribute="bottom" constant="8" id="Wwy-ZV-G5K"/>
+                <constraint firstItem="A5f-kv-xPE" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="aYx-xb-kpq"/>
+                <constraint firstItem="A5f-kv-xPE" firstAttribute="top" secondItem="RZC-PQ-30x" secondAttribute="bottom" constant="16" id="b86-Hx-0la"/>
+                <constraint firstItem="GwW-is-jvR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="cbC-kY-5xd"/>
+                <constraint firstItem="1G9-Iu-qy4" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.45" id="fM0-iU-v2X"/>
+                <constraint firstItem="8XB-h4-rrG" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ftH-sU-ZYJ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="xzU-3H-LH5" secondAttribute="trailing" constant="16" id="igq-21-7hb"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="1G9-Iu-qy4" secondAttribute="trailing" id="kSY-4e-TRX"/>
+                <constraint firstItem="GwW-is-jvR" firstAttribute="top" secondItem="xzU-3H-LH5" secondAttribute="bottom" constant="8" id="l1j-Hj-dhh"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="RZC-PQ-30x" secondAttribute="trailing" constant="16" id="nA7-fM-jt5"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="A5f-kv-xPE" secondAttribute="trailing" constant="16" id="sGf-dq-GDe"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="GwW-is-jvR" secondAttribute="trailing" constant="16" id="wLw-fU-Djz"/>
+                <constraint firstItem="RZC-PQ-30x" firstAttribute="top" secondItem="1G9-Iu-qy4" secondAttribute="bottom" constant="24" id="wgT-jg-x0j"/>
+                <constraint firstItem="xzU-3H-LH5" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="z8I-MX-Xxy"/>
+            </constraints>
+            <point key="canvasLocation" x="37" y="21"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="fallback" width="200" height="300"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
